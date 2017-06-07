@@ -1,0 +1,16 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # Magic of XOR
+
+        # Method 1:
+        result = 0
+        for i in nums:
+            result=result ^ i
+        return result
+        
+        # Method 2:
+        return reduce(lambda x,y: x ^ y, nums)
